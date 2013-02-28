@@ -502,7 +502,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@obj-name", "dag.average", "@obj-desc", "A", "moving", "average", "generator" ],
+					"args" : [ "@obj-name", "dag.average", "@obj-desc", "A", "moving", "average", "generator." ],
 					"id" : "obj-25",
 					"maxclass" : "bpatcher",
 					"name" : "dag.helpheader.maxpat",

@@ -7,7 +7,7 @@
 			"revision" : 8
 		}
 ,
-		"rect" : [ 441.0, 75.0, 941.0, 540.0 ],
+		"rect" : [ 441.0, 101.0, 941.0, 514.0 ],
 		"bgcolor" : [ 0.93, 0.93, 0.92, 1.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
@@ -89,7 +89,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@obj-name", "dag.random", "@obj-desc", "A", "random", "list", "generator" ],
+					"args" : [ "@obj-name", "dag.random", "@obj-desc", "A", "random", "list", "generator." ],
 					"embed" : 1,
 					"id" : "obj-68",
 					"maxclass" : "bpatcher",
@@ -104,7 +104,7 @@
 							"revision" : 8
 						}
 ,
-						"rect" : [ 445.0, 79.0, 483.0, 56.0 ],
+						"rect" : [ 445.0, 105.0, 483.0, 56.0 ],
 						"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
