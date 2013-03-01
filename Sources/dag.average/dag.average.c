@@ -1,6 +1,6 @@
 /*
  *
- * Copyright (C) 2012 Pierre Guillot, Universite Paris 8
+ * Copyright (C) 2012-2013 Pierre Guillot, Universite Paris 8
  *
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Library General Public License as published
@@ -68,7 +68,7 @@ void average_quadratic(t_average *x, short ac, t_atom *av);
 int main()
 {
 	t_class *c;
-
+   
 	c = class_new("dag.average", (method)average_new, (method)average_free, (short)sizeof(t_average), 0L, A_GIMME, 0);
 	class_addmethod(c, (method)average_int,		"int",		A_LONG,		0);
 	class_addmethod(c, (method)average_float,	"float",	A_FLOAT,	0);
@@ -76,7 +76,10 @@ int main()
 	class_addmethod(c, (method)average_bang,	"bang",					0);
 	class_addmethod(c, (method)average_reset,	"clear",				0);
 	class_addmethod(c, (method)average_assist,	"assist",	 A_CANT,	0);
-
+    
+    class_register(CLASS_BOX, c);
+	average_class = c;
+    
 	CLASS_ATTR_LONG				(c, "mode", 0, t_average, f_mode);
 	CLASS_ATTR_LABEL			(c, "mode", 0, "Mode");
 	CLASS_ATTR_ENUMINDEX		(c, "mode", 0, "Arithmetic \" Geometric \" Harmonic \" Quadratic");
@@ -87,7 +90,7 @@ int main()
 			
 	CLASS_ATTR_LONG				(c, "size", 0, t_average, f_limit);
 	CLASS_ATTR_LABEL			(c, "size", 0, "Size");
-	CLASS_ATTR_ORDER			(c, "size", 0, "-1");
+	CLASS_ATTR_ORDER			(c, "size", 0, "2");
 	CLASS_ATTR_FILTER_CLIP		(c, "size", 1, NMAX);
 	CLASS_ATTR_DEFAULT			(c, "size", 0, "10");
 	CLASS_ATTR_SAVE				(c, "size", 1);
@@ -95,8 +98,7 @@ int main()
 	post("dag.library by Pierre Guillot");
 	post("Copyright (C) 2012 - 2013, CICM | Universite Paris 8");
     
-    class_register(CLASS_BOX, c);
-	average_class = c;
+    
 
 	return 0;
 }

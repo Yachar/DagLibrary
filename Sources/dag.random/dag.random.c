@@ -1,3 +1,21 @@
+/*
+ *
+ * Copyright (C) 2012-2013 Pierre Guillot, Universite Paris 8
+ *
+ * This library is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU Library General Public License as published
+ * by the Free Software Foundation; either version 2 of the License.
+ *
+ * This library is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+ * FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Library General Public
+ * License for more details.
+ *
+ * You should have received a copy of the GNU Library General Public License
+ * along with this library; if not, write to the Free Software Foundation,
+ * Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+ *
+ */
 
 #include "ext.h"
 #include "ext_obex.h"
@@ -18,11 +36,11 @@ typedef struct  _rlg
 	t_atom		*f_result;
 	float		*f_resultFloat;
 	short		f_listSize;
-	short		f_newSize;
+	long		f_newSize;
 
 	float		f_min[NMAX];
 	float		f_max[NMAX];	
-	int			f_mode;
+	long		f_mode;
 
 } t_rlg;
 
@@ -51,6 +69,7 @@ int main()
 	class_addmethod(c, (method)rlg_int,			"int",			A_LONG,		0);
 	class_addmethod(c, (method)rlg_float,		"float",		A_FLOAT,	0);
 	class_addmethod(c, (method)rlg_list,		"list",			A_GIMME,	0);
+    
 	class_register(CLASS_BOX, c);
 	rlg_class = c;
 
@@ -65,8 +84,8 @@ int main()
 	CLASS_ATTR_LABEL			(c, "mode", 0, "Mode");
 	CLASS_ATTR_ENUMINDEX		(c, "mode", 0, "Integer \"Float" );
 	CLASS_ATTR_SAVE				(c, "mode", 1);
-	CLASS_ATTR_DEFAULT			(c, "max", 0, "1");
-	
+	CLASS_ATTR_DEFAULT			(c, "mode", 0, "1");
+   
 	class_findbyname(CLASS_BOX, gensym("dag.average"));
 
 	return 0;
