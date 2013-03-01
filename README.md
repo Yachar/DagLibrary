@@ -1,7 +1,5 @@
 # Dag Library 
 
-Data analyse and generation library.
-
 Dag Library is a collection of C classes and MAX/MSP objects destined to data analyse and generation. 
 
 Copyright (C) 2012-2013 Pierre Guillot, Universite Paris 8

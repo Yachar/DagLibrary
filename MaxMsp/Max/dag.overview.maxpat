@@ -400,7 +400,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 18.5, 120.0, 459.0, 19.0 ],
-					"text" : "dag.statistic : A statistic calculator"
+					"text" : "dag.gaussian : A normal ditribution generator"
 				}
 
 			}
@@ -567,7 +567,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@obj-name", "dag.library", "@obj-desc", "Data", "analyse", "and", "generation", "library." ],
+					"args" : [ "@obj-name", "dag.library", "@obj-desc", "Data", "analysis", "and", "data", "generation", "library." ],
 					"id" : "obj-25",
 					"maxclass" : "bpatcher",
 					"name" : "dag.helpheader.maxpat",
@@ -647,15 +647,15 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "dag.helpheader.maxpat",
-				"bootpath" : "/Users/Pierre/SourceTree/DagLibrary/MaxMsp/Max/others",
-				"patcherrelativepath" : "",
+				"bootpath" : "/Applications/Max6/Cycling '74/DagLibrary/others",
+				"patcherrelativepath" : "../../../../../../Applications/Max6/Cycling '74/DagLibrary/others",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "dag-icon.png",
-				"bootpath" : "/Users/Pierre/SourceTree/DagLibrary/MaxMsp/Max/others",
-				"patcherrelativepath" : "",
+				"bootpath" : "/Applications/Max6/Cycling '74/DagLibrary/others",
+				"patcherrelativepath" : "../../../../../../Applications/Max6/Cycling '74/DagLibrary/others",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
