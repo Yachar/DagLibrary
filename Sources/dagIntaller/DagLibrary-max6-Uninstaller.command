@@ -11,7 +11,7 @@ function remove5 {
 }
 
 function doRemove {
-	echo -ne "- HoaLibrary Installer Receipt\n"
+	echo -ne "- DagLibrary Installer Receipt\n"
 	sudo rm -Rf "/private/var/db/receipts"/com.cicm.daglibrary.*
 	echo -ne "... done.\n"
 	
@@ -23,7 +23,7 @@ function doRemove {
 
 	if [ -e "$maxAppFolder" ] ; then
 		
-		echo -ne "- Extra Files ($maxAppFolder/patches/extras/HoaExtras)"
+		echo -ne "- Extra Files ($maxAppFolder/patches/extras/dag.overview.maxpat)"
 		sudo rm -Rf "$maxAppFolder/patches/extras/dag.overview.maxpat" && echo -ne "... done.\n"
 	fi
  
@@ -53,7 +53,6 @@ whichVersion=0;
 
 maxAppFolder="/Applications/Max6";
 C74Folder="$maxAppFolder/Cycling '74"; 
-#HoaLibrary="$maxAppFolder/Cycling '74/extensions/hoa.loader.mxo";
 remove5;
 
 echo -ne "done"
