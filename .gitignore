@@ -184,5 +184,5 @@ ext_win_release/
 *.mpkg
 *.exe
 *.msi
-HoaPackage/
 *.zip
+*.dmg
