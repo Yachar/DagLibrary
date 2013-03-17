@@ -1,7 +1,0 @@
-;pg.smooth.def
-
-LIBRARY pg.smooth.mxe
-
-EXPORTS
-	main
-

@@ -1,7 +1,0 @@
-;filter.def
-
-LIBRARY filter.mxe
-
-EXPORTS
-	main
-
